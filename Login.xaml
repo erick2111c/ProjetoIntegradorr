@@ -1,0 +1,25 @@
+﻿<Page x:Class="WpfApp1.Login"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="Login">
+
+    <Grid Width="1920" Height="1080">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Fazer Login (3).png"/>
+        </Grid.Background>
+        <Button Content="ENTRAR" Height="52" Width="165" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1459,890,0,0" FontSize="24" Foreground="#FFAE6231" BorderBrush="White" Background="White" FontFamily="Bahnschrift" Click="Button_Click"/>
+        <Label Content="Não tem um conta?" HorizontalAlignment="Left" Margin="1178,967,0,0" VerticalAlignment="Top" Height="37" Width="228" FontSize="22" RenderTransformOrigin="-0.655,0.5" Foreground="White"/>
+        <Button x:Name="txtCriarConta" Content="Crie agora" HorizontalAlignment="Left" Margin="1406,967,0,0" VerticalAlignment="Top" Height="43" Width="124" Background="{x:Null}" FontSize="24" Foreground="White" RenderTransformOrigin="2.459,0.93" Click="Button_Click_1"/>
+        <TextBox x:Name="txtSENHA" BorderThickness="5" Margin="1066,888,0,0" TextWrapping="Wrap" Width="340" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="18" Height="54" VerticalContentAlignment="Center" Background="White" BorderBrush="White"/>
+        <TextBox x:Name="txtCPF" HorizontalAlignment="Left" Margin="607,886,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" Height="52" FontSize="20" VerticalContentAlignment="Center" BorderBrush="White" Background="White"/>
+
+
+
+
+    </Grid>
+</Page>

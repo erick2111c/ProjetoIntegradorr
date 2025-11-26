@@ -1,0 +1,95 @@
+﻿<Page x:Class="WpfApp1.AcompanharPedido"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1000"
+      Title="AcompanharPedido">
+
+    <Grid Background="#121212">
+        <Grid Width="700" Height="500" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,30">
+                <TextBlock Text="NINE WEST" 
+                           FontSize="36" 
+                           Foreground="White" 
+                           FontWeight="Bold" 
+                           HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" HorizontalAlignment="Center">
+                <TextBlock Text="📦 Pedido Confirmado!" 
+                           FontSize="28" 
+                           Foreground="#7CFC00"  
+                           FontWeight="SemiBold"
+                           HorizontalAlignment="Center" 
+                           Margin="0,0,0,10"/>
+                <TextBlock Text="Obrigado por sua compra." 
+                           FontSize="18" 
+                           Foreground="#AAAAAA" 
+                           HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <Border Grid.Row="2" Background="#1A1A1A" CornerRadius="8" Padding="30" Margin="0,20,0,20">
+                <StackPanel>
+                    <TextBlock Text="Status Atual da Entrega" 
+                               FontSize="22" 
+                               Foreground="White" 
+                               FontWeight="Bold" 
+                               Margin="0,0,0,15"/>
+
+                    <Grid Margin="0,0,0,15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" Foreground="#CCCCCC">
+                            Código do Pedido: <Run Text="NW-20251124-B1C2" FontWeight="Bold"/>
+                        </TextBlock>
+                        <TextBlock Grid.Column="1" Foreground="#CCCCCC">
+                            Data da Compra: <Run Text="24/11/2025" FontWeight="Bold"/>
+                        </TextBlock>
+                    </Grid>
+
+                    <Separator Background="#333333" Margin="0,0,0,15"/>
+
+                    <TextBlock Text="Aguardando Envio" 
+                               FontSize="18" 
+                               Foreground="#FFC107" 
+                               FontWeight="Bold"
+                               Margin="0,0,0,10"/>
+
+                    <TextBlock Text="Seu produto será embalado e enviado em até 2 dias úteis." 
+                               Foreground="#AAAAAA" 
+                               TextWrapping="Wrap"/>
+
+                    <TextBlock Text="O código de rastreio será enviado para o seu e-mail." 
+                               Foreground="#AAAAAA" 
+                               Margin="0,10,0,0"
+                               TextWrapping="Wrap"/>
+
+                </StackPanel>
+            </Border>
+
+            <Button Grid.Row="3" 
+                    Content="Voltar para a Home" 
+                    Height="40" 
+                    Width="200"
+                    Background="#555555" 
+                    Foreground="White" 
+                    BorderBrush="#666666" 
+                    HorizontalAlignment="Center" 
+                    Margin="0,10,0,0"/>
+
+        </Grid>
+    </Grid>
+</Page>

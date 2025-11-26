@@ -1,0 +1,143 @@
+﻿<Page x:Class="WpfApp1.FinalizarCompra"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1000"
+      Title="FinalizarCompra">
+
+    <Page.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="#1C1C1C"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#4A4A4A"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Margin" Value="0,2,0,10"/>
+            <Setter Property="Padding" Value="5,0,0,0"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="Foreground" Value="#CCCCCC"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Margin" Value="0,10,0,0"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Fazer Login (6).png" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="60"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="1" Margin="0,100,0,50">
+            <Label Content="Informações de Envio" FontSize="18" FontWeight="Bold" Foreground="White" Margin="0,0,0,20"/>
+
+            <Label Content="País / Região"/>
+            <TextBox Tag="País/Região"/>
+
+            <Label Content="CEP"/>
+            <TextBox Tag="CEP" Width="150" HorizontalAlignment="Left"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0">
+                    <Label Content="Nome"/>
+                    <TextBox Tag="Nome"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2">
+                    <Label Content="Sobrenome"/>
+                    <TextBox Tag="Sobrenome"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0">
+                    <Label Content="Endereço"/>
+                    <TextBox Tag="Endereço"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2">
+                    <Label Content="Número"/>
+                    <TextBox Tag="Número"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0">
+                    <Label Content="Cidade"/>
+                    <TextBox Tag="Cidade"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2">
+                    <Label Content="Telefone"/>
+                    <TextBox Tag="Telefone"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+
+        <Border Grid.Column="3" Background="#1A1A1A" CornerRadius="8" Margin="30,100,30,100" Padding="25" Grid.ColumnSpan="2">
+            <StackPanel>
+                <Label Content="Pagamento" FontSize="18" FontWeight="Bold" Foreground="White" Margin="0,0,0,20"/>
+
+                <Button Content="Cartão de crédito" Height="40" Foreground="White" BorderBrush="#555555" Margin="0,0,0,25" Background="#FF24258A"/>
+
+                <Label Content="Nome do cartão"/>
+                <TextBox Tag="Nome do Cartão" Margin="0,2,0,10"/>
+
+                <Label Content="Numero do cartão"/>
+                <TextBox Tag="Número do Cartão" Margin="0,2,0,10"/>
+
+                <Grid Margin="0,10,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0">
+                        <Label Content="Data de Vencimento"/>
+                        <TextBox Tag="Data Vencimento"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="2">
+                        <Label Content="Parcelas"/>
+                        <ComboBox Height="30" Background="#FFD22222" Foreground="Black" BorderBrush="#FF692E2E" Margin="0,6,0,10">
+                            <ComboBoxItem Content="1x sem juros"/>
+                            <ComboBoxItem Content="3x sem juros"/>
+                            <ComboBoxItem Content="6x com juros"/>
+                        </ComboBox>
+                    </StackPanel>
+                </Grid>
+
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Page>
