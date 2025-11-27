@@ -12,18 +12,18 @@
         <Viewbox Stretch="Fill">
             <Grid Width="800" Height="600">
                 <Image Source="/Finalizar Compra[ (1).png" Stretch="Fill"/>
-                <Button x:Name="btn33" Content="33" Width="26" Margin="409,363,0,205" HorizontalAlignment="Left"/>
-                <Button x:Name="btn34" Content="34" HorizontalAlignment="Left" Margin="440,363,0,0" VerticalAlignment="Top" Height="30" Width="24"/>
-                <Button x:Name="btn35" Content="35" HorizontalAlignment="Left" Margin="472,272,0,0" VerticalAlignment="Top" Height="26" Width="25"/>
-                <Button x:Name="btn36" Content="36" HorizontalAlignment="Left" Margin="502,272,0,0" VerticalAlignment="Top" Height="26" Width="25"/>
-                <Button x:Name="btn37" Content="37" HorizontalAlignment="Left" Margin="534,272,0,0" VerticalAlignment="Top" Height="26" Width="25"/>
-                <Button x:Name="btn38" Content="38" HorizontalAlignment="Left" Margin="564,272,0,0" VerticalAlignment="Top" Height="26" Width="25"/>
-                <Button x:Name="btn39" Content="39" HorizontalAlignment="Left" Margin="595,272,0,0" VerticalAlignment="Top" Height="26" Width="25"/>
-                <Button x:Name="btn40" Content="40" HorizontalAlignment="Left" Margin="626,272,0,0" VerticalAlignment="Top" Height="26" Width="25"/>
-                <Button x:Name="btn41" Content="41" HorizontalAlignment="Left" Margin="656,272,0,0" VerticalAlignment="Top" Height="26" Width="25"/>
-                <Button x:Name="btn42" Content="42" HorizontalAlignment="Left" Margin="688,272,0,0" VerticalAlignment="Top" Height="26" Width="25"/>
-                <Button x:Name="btn43" Content="43" HorizontalAlignment="Left" Margin="410,303,0,0" VerticalAlignment="Top" Height="26" Width="25"/>
-                <Button x:Name="btnAdicionarCarrinho" Content="" HorizontalAlignment="Left" Margin="400,476,0,0" VerticalAlignment="Top" Height="28" Width="325" Opacity="0"/>
+                <Button x:Name="btn33" Content="33" Width="26" Margin="409,363,0,205" HorizontalAlignment="Left" BorderBrush="Black" Foreground="White" Background="Black"/>
+                <Button x:Name="btn34" Content="34" HorizontalAlignment="Left" Margin="440,363,0,0" VerticalAlignment="Top" Height="32" Width="26" Background="Black" Foreground="White" BorderBrush="Black"/>
+                <Button x:Name="btn35" Content="35" HorizontalAlignment="Left" Margin="471,363,0,0" VerticalAlignment="Top" Height="32" Width="26" Background="Black" Foreground="White" BorderBrush="Black"/>
+                <Button x:Name="btn36" Content="36" HorizontalAlignment="Left" Margin="502,363,0,0" VerticalAlignment="Top" Height="32" Width="25" Background="Black" Foreground="White" BorderBrush="Black"/>
+                <Button x:Name="btn37" Content="37" HorizontalAlignment="Left" Margin="531,363,0,0" VerticalAlignment="Top" Height="32" Width="26" Background="Black" Foreground="White" BorderBrush="Black"/>
+                <Button x:Name="btn38" Content="38" HorizontalAlignment="Left" Margin="564,363,0,0" VerticalAlignment="Top" Height="32" Width="25" Background="Black" Foreground="White" BorderBrush="Black"/>
+                <Button x:Name="btn39" Content="39" HorizontalAlignment="Left" Margin="594,363,0,0" VerticalAlignment="Top" Height="32" Width="25" Background="Black" Foreground="White" BorderBrush="Black"/>
+                <Button x:Name="btn40" Content="40" HorizontalAlignment="Left" Margin="625,363,0,0" VerticalAlignment="Top" Height="32" Width="25" Background="Black" Foreground="White" BorderBrush="Black"/>
+                <Button x:Name="btn41" Content="41" HorizontalAlignment="Left" Margin="657,364,0,0" VerticalAlignment="Top" Height="31" Width="25" Background="Black" Foreground="White" BorderBrush="Black"/>
+                <Button x:Name="btn42" Content="42" HorizontalAlignment="Left" Margin="687,364,0,0" VerticalAlignment="Top" Height="31" Width="25" Background="Black" Foreground="White" BorderBrush="Black"/>
+                <Button x:Name="btn43" Content="43" HorizontalAlignment="Left" Margin="410,405,0,0" VerticalAlignment="Top" Height="32" Width="24" Background="Black" Foreground="White" BorderBrush="Black"/>
+                <Button x:Name="btnAdicionarCarrinho" Content="ADICIONAR AO CARRINHO" HorizontalAlignment="Left" Margin="413,477,0,0" VerticalAlignment="Top" Height="27" Width="318" BorderBrush="Black" Background="Black" Foreground="White" Click="btnAdicionarCarrinho_Click"/>
 
             </Grid>
         </Viewbox>

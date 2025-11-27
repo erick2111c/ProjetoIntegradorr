@@ -23,10 +23,6 @@ namespace WpfApp1
         public FinalizarCompra()
         {
             InitializeComponent();
-        }
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-
-        }
+        }  
     }
 }

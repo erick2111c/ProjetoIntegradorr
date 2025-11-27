@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1;
 
 namespace WpfApp1
 {
@@ -30,5 +31,48 @@ namespace WpfApp1
             NavigationService.Navigate(new AreaDeCompra());
 
         }
+    }
+}
+public partial class ComprarTenis : Page
+{
+    private int tamanhoSelecionado = 0;
+    private Button botaoSelecionado = null;
+
+    public ComprarTenis()
+    {
+        InitializeComponent();
+    }
+
+    private void SelecionarTamanho_Click(object sender, RoutedEventArgs e)
+    {
+        Button btn = sender as Button;
+
+        // Reseta visual do botão anterior
+        if (botaoSelecionado != null)
+        {
+            botaoSelecionado.Background = Brushes.Black;
+            botaoSelecionado.Foreground = Brushes.White;
+        }
+
+        // Marca o novo botão como selecionado
+        btn.Background = new SolidColorBrush(Color.FromRgb(180, 215, 255)); // azul claro
+        btn.Foreground = Brushes.Black;
+
+        botaoSelecionado = btn;
+
+        // guarda o tamanho
+        tamanhoSelecionado = int.Parse(btn.Tag.ToString());
+    }
+
+    private void AdicionarCarrinho_Click(object sender, RoutedEventArgs e)
+    {
+        if (tamanhoSelecionado == 0)
+        {
+            MessageBox.Show("Escolha um tamanho antes de adicionar ao carrinho.");
+            return;
+        }
+
+        // Navega para a tela de Finalização levando o tamanho
+        NavigationService.Navigate(new FinalizarCompra(tamanhoSelecionado));
     }
 }

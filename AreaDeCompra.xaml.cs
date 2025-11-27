@@ -24,10 +24,9 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnAdicionarCarrinho_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new FinalizarCompra());
         }
     }
 }
