@@ -7,38 +7,68 @@
       d:DesignHeight="700" d:DesignWidth="1000"
       Title="AcompanharPedido">
 
-    <Grid Background="#121212">
+    <Page.Resources>
+        <Style TargetType="TextBlock" x:Key="BaseText">
+            <Setter Property="Foreground" Value="#CCCCCC"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Border" 
+                                Background="#555555" 
+                                BorderBrush="#666666" 
+                                BorderThickness="1" 
+                                CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="#6A6A6A"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="#424242"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="#FF4E4E4E">
         <Grid Width="700" Height="500" HorizontalAlignment="Center" VerticalAlignment="Center">
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="100"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,30">
-                <TextBlock Text="NINE WEST" 
-                           FontSize="36" 
-                           Foreground="White" 
-                           FontWeight="Bold" 
-                           HorizontalAlignment="Center"/>
-            </StackPanel>
+            <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,30"/>
 
-            <StackPanel Grid.Row="1" HorizontalAlignment="Center">
+            <StackPanel Grid.Row="1" HorizontalAlignment="Center" Margin="0,0,0,20">
                 <TextBlock Text="📦 Pedido Confirmado!" 
                            FontSize="28" 
-                           Foreground="#7CFC00"  
+                           Foreground="#7CFC00" 
                            FontWeight="SemiBold"
                            HorizontalAlignment="Center" 
-                           Margin="0,0,0,10"/>
+                           Margin="0,0,0,5"/>
                 <TextBlock Text="Obrigado por sua compra." 
                            FontSize="18" 
                            Foreground="#AAAAAA" 
                            HorizontalAlignment="Center"/>
             </StackPanel>
 
-            <Border Grid.Row="2" Background="#1A1A1A" CornerRadius="8" Padding="30" Margin="0,20,0,20">
+            <Border Grid.Row="2" Background="#FF555555" CornerRadius="8" Padding="30">
                 <StackPanel>
                     <TextBlock Text="Status Atual da Entrega" 
                                FontSize="22" 
@@ -52,43 +82,39 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
-                        <TextBlock Grid.Column="0" Foreground="#CCCCCC">
-                            Código do Pedido: <Run Text="NW-20251124-B1C2" FontWeight="Bold"/>
-                        </TextBlock>
-                        <TextBlock Grid.Column="1" Foreground="#CCCCCC">
-                            Data da Compra: <Run Text="24/11/2025" FontWeight="Bold"/>
-                        </TextBlock>
+                        <StackPanel Grid.Column="0">
+                            <TextBlock Style="{StaticResource BaseText}">Código do Pedido:</TextBlock>
+                            <TextBlock Text="NW-20251124-B1C2" FontWeight="Bold" Foreground="White" FontSize="16"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Style="{StaticResource BaseText}">Data da Compra:</TextBlock>
+                            <TextBlock Text="24/11/2025" FontWeight="Bold" Foreground="White" FontSize="16"/>
+                        </StackPanel>
                     </Grid>
 
-                    <Separator Background="#333333" Margin="0,0,0,15"/>
+                    <Separator Background="#333333" Margin="0,0,0,20"/>
 
                     <TextBlock Text="Aguardando Envio" 
                                FontSize="18" 
-                               Foreground="#FFC107" 
+                               Foreground="#FF4CF156" 
                                FontWeight="Bold"
                                Margin="0,0,0,10"/>
 
-                    <TextBlock Text="Seu produto será embalado e enviado em até 2 dias úteis." 
-                               Foreground="#AAAAAA" 
-                               TextWrapping="Wrap"/>
-
-                    <TextBlock Text="O código de rastreio será enviado para o seu e-mail." 
-                               Foreground="#AAAAAA" 
-                               Margin="0,10,0,0"
-                               TextWrapping="Wrap"/>
+                    <TextBlock Style="{StaticResource BaseText}" Foreground="#AAAAAA" Margin="0,0,0,5">
+                        Seu produto será embalado e enviado em até 2 dias úteis.
+                    </TextBlock>
+                    <TextBlock Style="{StaticResource BaseText}" Foreground="#AAAAAA">
+                        O código de rastreio será enviado para o seu e-mail.
+                    </TextBlock>
 
                 </StackPanel>
             </Border>
 
             <Button Grid.Row="3" 
                     Content="Voltar para a Home" 
-                    Height="40" 
-                    Width="200"
-                    Background="#555555" 
-                    Foreground="White" 
-                    BorderBrush="#666666" 
                     HorizontalAlignment="Center" 
-                    Margin="0,10,0,0"/>
+                    Margin="0,20,0,0" Foreground="White" Background="White"/>
 
         </Grid>
     </Grid>

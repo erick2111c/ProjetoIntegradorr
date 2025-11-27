@@ -9,6 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Design sem nome %281%29.png" />
+    <None Remove="Design sem nome.png" />
     <None Remove="Fazer Login %281%29.png" />
     <None Remove="Fazer Login %283%29.png" />
     <None Remove="Fazer Login %285%29.png" />
@@ -20,6 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Design sem nome (1).png" />
+    <Resource Include="Design sem nome.png" />
     <Resource Include="Fazer Login (1).png" />
     <Resource Include="Fazer Login (3).png" />
     <Resource Include="Fazer Login (5).png" />

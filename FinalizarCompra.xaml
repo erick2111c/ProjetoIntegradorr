@@ -17,11 +17,44 @@
             <Setter Property="Height" Value="30"/>
             <Setter Property="Margin" Value="0,2,0,10"/>
             <Setter Property="Padding" Value="5,0,0,0"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
         </Style>
         <Style TargetType="Label">
             <Setter Property="Foreground" Value="#CCCCCC"/>
             <Setter Property="FontSize" Value="13"/>
             <Setter Property="Margin" Value="0,10,0,0"/>
+        </Style>
+
+        <Style x:Key="FinalizarButton" TargetType="Button">
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#3D5AFE"/>
+            <Setter Property="BorderBrush" Value="#2943e8"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Margin" Value="0,30,0,0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Border" 
+                                Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="#657AFF"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="#2943e8"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
     </Page.Resources>
 
@@ -33,12 +66,12 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="60"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="30"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="60"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="1" Margin="0,100,0,50">
+        <StackPanel Grid.Column="1" Margin="0,50,0,50">
             <Label Content="Informações de Envio" FontSize="18" FontWeight="Bold" Foreground="White" Margin="0,0,0,20"/>
 
             <Label Content="País / Região"/>
@@ -102,42 +135,60 @@
             </Grid>
         </StackPanel>
 
-        <Border Grid.Column="3" Background="#1A1A1A" CornerRadius="8" Margin="30,100,30,100" Padding="25" Grid.ColumnSpan="2">
-            <StackPanel>
-                <Label Content="Pagamento" FontSize="18" FontWeight="Bold" Foreground="White" Margin="0,0,0,20"/>
+        <Border Grid.Column="3" Background="#1A1A1A" CornerRadius="8" Margin="0,50,0,50" Padding="25">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
 
-                <Button Content="Cartão de crédito" Height="40" Foreground="White" BorderBrush="#555555" Margin="0,0,0,25" Background="#FF24258A"/>
+                <StackPanel Grid.Row="0">
+                    <Label Content="Pagamento" FontSize="18" FontWeight="Bold" Foreground="White" Margin="0,0,0,20"/>
 
-                <Label Content="Nome do cartão"/>
-                <TextBox Tag="Nome do Cartão" Margin="0,2,0,10"/>
+                    <Button Content="Cartão de crédito" Height="50" Foreground="White" BorderBrush="#555555" Margin="0,0,0,25" Background="#FF24258A"/>
 
-                <Label Content="Numero do cartão"/>
-                <TextBox Tag="Número do Cartão" Margin="0,2,0,10"/>
+                    <Label Content="Nome do cartão"/>
+                    <TextBox Tag="Nome do Cartão"/>
 
-                <Grid Margin="0,10,0,0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="10"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+                    <Label Content="Numero do cartão"/>
+                    <TextBox Tag="Número do Cartão"/>
 
-                    <StackPanel Grid.Column="0">
-                        <Label Content="Data de Vencimento"/>
-                        <TextBox Tag="Data Vencimento"/>
-                    </StackPanel>
+                    <Grid Margin="0,10,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
 
-                    <StackPanel Grid.Column="2">
-                        <Label Content="Parcelas"/>
-                        <ComboBox Height="30" Background="#FFD22222" Foreground="Black" BorderBrush="#FF692E2E" Margin="0,6,0,10">
-                            <ComboBoxItem Content="1x sem juros"/>
-                            <ComboBoxItem Content="3x sem juros"/>
-                            <ComboBoxItem Content="6x com juros"/>
-                        </ComboBox>
-                    </StackPanel>
-                </Grid>
+                        <StackPanel Grid.Column="0">
+                            <Label Content="Data de Vencimento"/>
+                            <TextBox Tag="Data Vencimento"/>
+                        </StackPanel>
 
-            </StackPanel>
+                        <StackPanel Grid.Column="2">
+                            <Label Content="Parcelas"/>
+                            <ComboBox Height="30" Foreground="Black" Margin="0,6,0,10">
+                                <ComboBox.Background>
+                                    <SolidColorBrush Color="#FFD22222" Opacity="0.5"/>
+                                </ComboBox.Background>
+                                <ComboBox.BorderBrush>
+                                    <SolidColorBrush Color="#FF692E2E" Opacity="0.5"/>
+                                </ComboBox.BorderBrush>
+                                <ComboBoxItem Content="1x sem juros" IsSelected="True"/>
+                                <ComboBoxItem Content="3x sem juros"/>
+                                <ComboBoxItem Content="6x com juros"/>
+                            </ComboBox>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+
+                <Button Grid.Row="2" 
+                        Content="FINALIZAR" 
+                        Click="Button_Click" 
+                        Style="{StaticResource FinalizarButton}"
+                        HorizontalAlignment="Stretch"/>
+            </Grid>
         </Border>
-
     </Grid>
+
 </Page>
