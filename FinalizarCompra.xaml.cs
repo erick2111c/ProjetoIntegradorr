@@ -20,7 +20,7 @@ namespace WpfApp1
     /// </summary>
     public partial class FinalizarCompra : Page
     {
-        public FinalizarCompra()
+        public FinalizarCompra(Item produto)
         {
             InitializeComponent();
         }

@@ -20,13 +20,24 @@ namespace WpfApp1
     /// </summary>
     public partial class AreaDeCompra : Page
     {
+        public Item Produto;
+
         public AreaDeCompra()
         {
             InitializeComponent();
         }
+        private void SetProduto(object sender, RoutedEventArgs e)
+        {
+            var btn = sender as Button;
+            var tag = btn.Tag.ToString();
+
+            Produto = new Item("100241", 449.90, int.Parse(tag));
+        }
+
         private void btnAdicionarCarrinho_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new FinalizarCompra());
+            NavigationService.Navigate(new FinalizarCompra(Produto));
         }
+
     }
 }
