@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Cadastro.png" />
     <None Remove="Design sem nome %281%29.png" />
     <None Remove="Design sem nome.png" />
     <None Remove="dfgdfrgdsfds.png" />
@@ -25,6 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Cadastro.png" />
     <Resource Include="Design sem nome (1).png" />
     <Resource Include="Design sem nome.png" />
     <Resource Include="dfgdfrgdsfds.png" />
