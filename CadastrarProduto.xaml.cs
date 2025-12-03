@@ -27,8 +27,7 @@ namespace WpfApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Estoque());
-
+            MessageBox.Show("Cadastro Concluido!");
             string Produto = prod.Text;
 
             string Quantidade = quant.Text;
@@ -39,6 +38,14 @@ namespace WpfApp1
 
             string Preco = prec.Text;
 
+
+
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Estoque());
+        
+    }
     }
 }

@@ -11,15 +11,15 @@
     <Grid Background="White">
         <Viewbox Stretch="Fill">
             <Grid Width="800" Height="600">
-                <Label Content="PRODUTO" HorizontalAlignment="Left" Margin="218,56,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-                <Label Content="QUANTIDADE" HorizontalAlignment="Left" Margin="193,100,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.744,1.176"/>
-                <Label Content="TAMANHO" HorizontalAlignment="Left" Margin="212,136,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.617,0.524"/>
-                <Button Content="ADICIONAR PRODUTO" HorizontalAlignment="Left" Margin="318,297,0,0" VerticalAlignment="Top" Height="24" Background="#FF242175" Foreground="White" RenderTransformOrigin="0.434,-2.167" Click="Button_Click"/>
-                <Button Content="FINALIZAR" HorizontalAlignment="Left" Margin="252,341,0,0" VerticalAlignment="Top" Height="24" Width="143" Foreground="White" Background="#FF0E6313"/>
-                <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="413,341,0,0" VerticalAlignment="Top" Height="24" Width="71" Background="#FF8A1717" Foreground="White"/>
-                <Label Content="PREÇO" HorizontalAlignment="Left" Margin="240,182,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-                <Label Content="COR" HorizontalAlignment="Left" Margin="256,225,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.878,0.151"/>
-                <ComboBox x:Name="corr" HorizontalAlignment="Left" Margin="295,226,0,0" VerticalAlignment="Top" Width="176" Height="26">
+                <Label Content="PRODUTO" HorizontalAlignment="Left" Margin="218,111,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                <Label Content="QUANTIDADE" HorizontalAlignment="Left" Margin="193,153,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.744,1.176"/>
+                <Label Content="TAMANHO" HorizontalAlignment="Left" Margin="212,191,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.617,0.524"/>
+                <Button Content="ADICIONAR PRODUTO" HorizontalAlignment="Left" Margin="321,349,0,0" VerticalAlignment="Top" Height="24" Background="#FF242175" Foreground="White" RenderTransformOrigin="0.434,-2.167" Click="Button_Click"/>
+                <Button Content="FINALIZAR" HorizontalAlignment="Left" Margin="295,395,0,0" VerticalAlignment="Top" Height="24" Width="97" Foreground="White" Background="#FF0E6313"/>
+                <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="400,395,0,0" VerticalAlignment="Top" Height="24" Width="71" Background="#FF8A1717" Foreground="White" RenderTransformOrigin="0.465,2.792"/>
+                <Label Content="PREÇO" HorizontalAlignment="Left" Margin="236,239,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                <Label Content="COR" HorizontalAlignment="Left" Margin="248,0,0,0" VerticalAlignment="Center" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.878,0.151"/>
+                <ComboBox x:Name="corr" HorizontalAlignment="Left" Margin="295,283,0,0" VerticalAlignment="Top" Width="176" Height="26">
                     <ComboBoxItem Content="PRETO"/>
                     <ComboBoxItem Content="BRANCO"/>
                     <ComboBoxItem Content="AZUL"/>
@@ -28,10 +28,10 @@
                     <ComboBoxItem Content="CINZA"/>
                     <ComboBoxItem Content="VERDE"/>
                 </ComboBox>
-                <TextBox x:Name="quant" HorizontalAlignment="Left" Margin="295,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="24"/>
-                <TextBox x:Name="prec" HorizontalAlignment="Left" Margin="295,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="24"/>
-                <TextBox x:Name="prod" HorizontalAlignment="Left" Margin="295,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="24"/>
-                <ComboBox x:Name="tamanh" HorizontalAlignment="Left" Margin="295,137,0,0" VerticalAlignment="Top" Width="176" Height="26">
+                <TextBox x:Name="quant" HorizontalAlignment="Left" Margin="295,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="24"/>
+                <TextBox x:Name="prec" HorizontalAlignment="Left" Margin="295,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="24"/>
+                <TextBox x:Name="prod" HorizontalAlignment="Left" Margin="295,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="24"/>
+                <ComboBox x:Name="tamanh" HorizontalAlignment="Left" Margin="295,191,0,0" VerticalAlignment="Top" Width="176" Height="26">
                     <ComboBoxItem Content="33"/>
                     <ComboBoxItem Content="34"/>
                     <ComboBoxItem Content="35"/>
