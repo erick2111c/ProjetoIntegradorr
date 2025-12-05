@@ -21,8 +21,15 @@
     <None Remove="Fazer Login %288%29.png" />
     <None Remove="Finalizar Compra[ %281%29.png" />
     <None Remove="Gemini_Generated_Image_s9cx4bs9cx4bs9cx.png" />
+    <None Remove="go4kej.CY7hJZ-A.png" />
+    <None Remove="images.jpg" />
+    <None Remove="pngtree-3d-rendering-of-warehouse-inventory-stockpile-image_13575510.png" />
     <None Remove="Tela de Compra %281%29.png" />
     <None Remove="Tela de Compra.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="9.5.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,6 +45,9 @@
     <Resource Include="Fazer Login (8).png" />
     <Resource Include="Finalizar Compra[ (1).png" />
     <Resource Include="Gemini_Generated_Image_s9cx4bs9cx4bs9cx.png" />
+    <Resource Include="go4kej.CY7hJZ-A.png" />
+    <Resource Include="images.jpg" />
+    <Resource Include="pngtree-3d-rendering-of-warehouse-inventory-stockpile-image_13575510.png" />
     <Resource Include="Tela de Compra (1).png" />
     <Resource Include="Tela de Compra.png" />
   </ItemGroup>

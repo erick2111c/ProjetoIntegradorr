@@ -8,8 +8,8 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="gerencimaneto">
 
-    <Grid>
-        <DataGrid x:Name="dgUsuarios"
+    <Grid Background="#FF080606" OpacityMask="#FF4A4747">
+        <DataGrid x:Name="dgEstoque"
                   Margin="10"
                   AutoGenerateColumns="False"
                   
@@ -39,25 +39,25 @@
                                     Width="40"  
                                     Binding="{Binding Id}" />
 
+                <DataGridTextColumn Header="Item"  
+                     Width="2*"  
+                     Binding="{Binding Item}" />
+
                 <DataGridTextColumn Header="Descrição"  
                                     Width="2*"  
-                                    Binding="{Binding Nome}" />
+                                    Binding="{Binding Descricao}" />
 
-                <DataGridTextColumn Header="Valor de Venda"  
+                <DataGridTextColumn Header="Valor un."  
                                     Width="2*"  
-                                    Binding="{Binding Email}" />
-
-                <DataGridTextColumn Header="Entrada"  
-                                    Width="1*"  
-                                    Binding="{Binding Departamento}" />
+                                    Binding="{Binding ValorUn}" />
 
                 <DataGridTextColumn Header="Quantidade"  
                                     Width="100"  
-                                    Binding="{Binding DataNascimento, StringFormat='dd/MM/yyyy'}" />
+                                    Binding="{Binding Quantidade}" />
 
-                <DataGridTextColumn Header="Saida"  
+                <DataGridTextColumn Header="ValorTotal"  
                                     Width="120"  
-                                    Binding="{Binding DataCadastro, StringFormat='dd/MM/yyyy'}" />
+                                    Binding="{Binding ValorTotal}" />
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="VOLTAR" HorizontalAlignment="Left" Margin="20,401,0,0" VerticalAlignment="Top" Height="24" Width="71" FontSize="14" Background="#FF162C84" Foreground="White" Click="Button_Click" RenderTransformOrigin="0.127,1.792"/>

@@ -29,5 +29,15 @@ namespace WpfApp1
         {
             NavigationService.Navigate(new CadastrarProduto());
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+           NavigationService.Navigate(new gerencimaneto());
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Editar());
+        }
     }
 }

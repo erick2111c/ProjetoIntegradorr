@@ -11,12 +11,15 @@
     <Grid Background="White">
         <Viewbox Stretch="Fill">
             <Grid Width="800" Height="600">
+                <Grid.Background>
+                    <ImageBrush ImageSource="/pngtree-3d-rendering-of-warehouse-inventory-stockpile-image_13575510.png"/>
+                </Grid.Background>
                 <Label Content="PRODUTO" HorizontalAlignment="Left" Margin="218,111,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
                 <Label Content="QUANTIDADE" HorizontalAlignment="Left" Margin="193,153,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.744,1.176"/>
                 <Label Content="TAMANHO" HorizontalAlignment="Left" Margin="212,191,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.617,0.524"/>
-                <Button Content="ADICIONAR PRODUTO" HorizontalAlignment="Left" Margin="321,349,0,0" VerticalAlignment="Top" Height="24" Background="#FF242175" Foreground="White" RenderTransformOrigin="0.434,-2.167" Click="Button_Click"/>
-                <Button Content="FINALIZAR" HorizontalAlignment="Left" Margin="295,395,0,0" VerticalAlignment="Top" Height="24" Width="97" Foreground="White" Background="#FF0E6313"/>
-                <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="400,395,0,0" VerticalAlignment="Top" Height="24" Width="71" Background="#FF8A1717" Foreground="White" RenderTransformOrigin="0.465,2.792"/>
+                <Button Content="ADICIONAR PRODUTO" HorizontalAlignment="Left" Margin="321,326,0,0" VerticalAlignment="Top" Height="24" Background="#FF242175" Foreground="White" RenderTransformOrigin="0.434,-2.167" Click="Button_Click"/>
+                <Button Content="FINALIZAR" HorizontalAlignment="Left" Margin="295,373,0,0" VerticalAlignment="Top" Height="24" Width="97" Foreground="White" Background="#FF0E6313" Click="Button_Click_4"/>
+                <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="397,373,0,0" VerticalAlignment="Top" Height="24" Width="82" Background="#FF8A1717" Foreground="White" RenderTransformOrigin="0.465,2.792" Click="Button_Click_3"/>
                 <Label Content="PREÇO" HorizontalAlignment="Left" Margin="236,239,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
                 <Label Content="COR" HorizontalAlignment="Left" Margin="248,0,0,0" VerticalAlignment="Center" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.878,0.151"/>
                 <ComboBox x:Name="corr" HorizontalAlignment="Left" Margin="295,283,0,0" VerticalAlignment="Top" Width="176" Height="26">
@@ -44,6 +47,8 @@
                     <ComboBoxItem Content="42"/>
                     <ComboBoxItem Content="43"/>
                 </ComboBox>
+                <Button Content="ESTOQUE" HorizontalAlignment="Left" Margin="484,373,0,0" VerticalAlignment="Top" Height="24" Width="76" Background="#FF598AEA" Foreground="White" Click="Button_Click_1"/>
+                <TextBlock x:Name="Desc" HorizontalAlignment="Center" Margin="0,510,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="20"/>
 
             </Grid>
         </Viewbox>
