@@ -46,7 +46,8 @@ namespace WpfApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var sql = $"INSERT INTO produtos (Nome,Descricao,ValorUn,Quantidade,ValorTotal) VALUES (@nome, @descricao,@valorun,@quantidade, @valortotal)";
+                MessageBox.Show("Tênis Cadastrado!");
+            var sql = $"INSERT INTO produtos (Nome,Descricao,ValorUn,Quantidade,Cor,Tamanho,) VALUES (@nome, @descricao,@valorun,@quantidade, @cor, @tamanho)";
             try
             {
                 if (Conexao.State == System.Data.ConnectionState.Open)
@@ -54,15 +55,15 @@ namespace WpfApp1
                     using (MySqlCommand cmd = new MySqlCommand(sql, Conexao))
                     {
                         cmd.Parameters.AddWithValue("@nome", prod.Text);
-                        cmd.Parameters.AddWithValue("@descricao", Desc.Text);
+                        cmd.Parameters.AddWithValue("@descricao", DESC.Text);
                         cmd.Parameters.AddWithValue("@valorun", prec.Text);
                         cmd.Parameters.AddWithValue("@quantidade", quant.Text);
-                        cmd.Parameters.AddWithValue("@valortotal", quant.Text);
+                        cmd.Parameters.AddWithValue("@cor", corr.Text);
+                        cmd.Parameters.AddWithValue("@tamanho", tamanh.Text);
 
                         cmd.ExecuteNonQuery();
                     }
                 }
-                MessageBox.Show("Cadastro Concluido!");
             }
             catch (Exception ex) { }
 
