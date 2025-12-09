@@ -31,7 +31,7 @@ namespace WpfApp1
             var btn = sender as Button;
             var tag = btn.Tag.ToString();
 
-            Produto = new Item("100241", 449.90, int.Parse(tag));
+            //Produto = new Item("100241", 449.90, int.Parse(tag));
         }
 
         private void btnAdicionarCarrinho_Click(object sender, RoutedEventArgs e)

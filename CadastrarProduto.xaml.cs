@@ -46,23 +46,21 @@ namespace WpfApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-                MessageBox.Show("Tênis Cadastrado!");
-            var sql = $"INSERT INTO produtos (Nome,Descricao,ValorUn,Quantidade,Cor,Tamanho,) VALUES (@nome, @descricao,@valorun,@quantidade, @cor, @tamanho)";
+            var sql = $"INSERT INTO produtos (Nome,Descricao,ValorUn,Quantidade,cor,Tamanho) VALUES (@nome, @descricao,@valorun,@quantidade, @cor, @tamanho)";
             try
             {
-                if (Conexao.State == System.Data.ConnectionState.Open)
+                using (MySqlCommand cmd = new MySqlCommand(sql, Conexao))
                 {
-                    using (MySqlCommand cmd = new MySqlCommand(sql, Conexao))
-                    {
-                        cmd.Parameters.AddWithValue("@nome", prod.Text);
-                        cmd.Parameters.AddWithValue("@descricao", DESC.Text);
-                        cmd.Parameters.AddWithValue("@valorun", prec.Text);
-                        cmd.Parameters.AddWithValue("@quantidade", quant.Text);
-                        cmd.Parameters.AddWithValue("@cor", corr.Text);
-                        cmd.Parameters.AddWithValue("@tamanho", tamanh.Text);
+                    cmd.Parameters.AddWithValue("@nome", prod.Text);
+                    cmd.Parameters.AddWithValue("@descricao", DESC.Text);
+                    cmd.Parameters.AddWithValue("@valorun", double.Parse(prec.Text));
+                    cmd.Parameters.AddWithValue("@quantidade", int.Parse(quant.Text));
+                    cmd.Parameters.AddWithValue("@cor", corr.Text);
+                    cmd.Parameters.AddWithValue("@tamanho", int.Parse(tamanh.Text));
 
-                        cmd.ExecuteNonQuery();
-                    }
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Tênis Cadastrado!");
                 }
             }
             catch (Exception ex) { }
@@ -80,7 +78,7 @@ namespace WpfApp1
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new CadastrarProduto());
+            NavigationService.Navigate(new Home());
         }
     }
 }

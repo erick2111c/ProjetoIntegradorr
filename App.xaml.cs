@@ -14,15 +14,25 @@ namespace WpfApp1
 
     public class Item
     {
-        public string Codigo;
-        public double Valor;
-        public int Tamanho;
+        public int Id { get; set; }
+        public string Produto { get; set; }
+        public string Descricao { get; set; }
+        public double ValorUn { get; set; }
+        public int Quantidade { get; set; }
+        public string Cor { get; set; }
+        public int Tam { get; set; }
+        public double ValorTotal { get; set; }
 
-        public Item(string codigo, double valor, int tamanho)
+        internal Item(int id, string nome, string descricao, double valorUn, int quantidade, string cor, int tamanho, double valorTotal)
         {
-            Codigo=codigo;
-            Valor=valor;
-            Tamanho=tamanho;
+            Id = id;
+            Produto=nome;
+            Descricao=descricao;
+            ValorUn=valorUn;
+            Quantidade=quantidade;
+            Cor=cor;
+            Tam=tamanho;
+            ValorTotal = valorTotal;
         }
     }
 

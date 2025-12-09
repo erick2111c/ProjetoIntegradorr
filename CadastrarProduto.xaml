@@ -17,9 +17,8 @@
                 <Label Content="PRODUTO" HorizontalAlignment="Left" Margin="214,111,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Background="White"/>
                 <Label Content="QUANTIDADE" HorizontalAlignment="Left" Margin="188,237,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.744,1.176" Background="White"/>
                 <Label Content="TAMANHO" HorizontalAlignment="Left" Margin="206,319,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.617,0.524" Background="White"/>
-                <Button Content="ADICIONAR PRODUTO" HorizontalAlignment="Left" Margin="321,369,0,0" VerticalAlignment="Top" Height="24" Background="#FF242175" Foreground="White" RenderTransformOrigin="0.434,-2.167" Click="Button_Click"/>
-                <Button Content="FINALIZAR" HorizontalAlignment="Left" Margin="286,418,0,0" VerticalAlignment="Top" Height="24" Width="97" Foreground="White" Background="#FF0E6313" Click="Button_Click_4"/>
-                <Button Content="VOLTAR" HorizontalAlignment="Left" Margin="389,418,0,0" VerticalAlignment="Top" Height="24" Width="82" Background="#FF8A1717" Foreground="White" RenderTransformOrigin="0.465,2.792" Click="Button_Click_3"/>
+                <Button Content="ADICIONAR PRODUTO" HorizontalAlignment="Left" Margin="368,412,0,0" VerticalAlignment="Top" Height="24" Background="#FF242175" Foreground="White" RenderTransformOrigin="0.434,-2.167" Click="Button_Click"/>
+                <Button Content="VOLTAR" HorizontalAlignment="Left" Margin="270,412,0,0" VerticalAlignment="Top" Height="24" Width="82" Background="#FF8A1717" Foreground="White" RenderTransformOrigin="0.465,2.792" Click="Button_Click_3"/>
                 <Label Content="PREÇO" HorizontalAlignment="Left" Margin="235,188,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Background="White"/>
                 <Label Content="COR" HorizontalAlignment="Left" Margin="251,280,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.878,0.151" Background="White"/>
                 <ComboBox x:Name="corr" HorizontalAlignment="Left" Margin="295,278,0,0" VerticalAlignment="Top" Width="176" Height="26">
