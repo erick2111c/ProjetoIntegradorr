@@ -60,7 +60,7 @@ namespace WpfApp1
 
                     cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Tênis Cadastrado!");
+                    MessageBox.Show("Produto Cadastrado!");
                 }
             }
             catch (Exception ex) { }
