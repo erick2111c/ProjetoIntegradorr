@@ -80,17 +80,7 @@ namespace WpfApp1
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Cancelamento  Concluido!");
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_4(object sender, RoutedEventArgs e)
-        {
-
+            NavigationService.Navigate(new CadastrarProduto());
         }
     }
 }
