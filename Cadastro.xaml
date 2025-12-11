@@ -18,10 +18,10 @@
 
         <Button Content="CADASTRAR" HorizontalAlignment="Left" Margin="562,921,0,0" VerticalAlignment="Top" FontSize="36" Height="54" Width="230" Grid.Column="1" BorderBrush="White" Background="White" Foreground="#FFDC621E" FontFamily="Segoe UI Semibold" Click="Button_Click"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="485,877,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="373" Height="45" FontSize="24" BorderBrush="White"/>
+        <TextBox x:Name="tb_Nome" HorizontalAlignment="Left" Margin="485,877,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="373" Height="45" FontSize="24" BorderBrush="White"/>
         <Button Content="CADASTRAR" HorizontalAlignment="Left" Margin="631,381,0,0" VerticalAlignment="Top" Height="27" Width="81" Opacity="0"/>
-        <TextBox HorizontalAlignment="Left" Margin="127,988,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" Height="40" FontSize="24" Grid.Column="1" BorderBrush="White"/>
-        <TextBox HorizontalAlignment="Left" Margin="526,988,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="328" Height="40" FontSize="24" BorderBrush="White"/>
-        <TextBox HorizontalAlignment="Left" Margin="107,876,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="360" Height="46" FontSize="24" Grid.Column="1" BorderBrush="White"/>
+        <TextBox x:Name="tb_Senha" HorizontalAlignment="Left" Margin="127,988,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" Height="40" FontSize="24" Grid.Column="1" BorderBrush="White"/>
+        <TextBox x:Name="tb_Telefone" HorizontalAlignment="Left" Margin="526,988,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="328" Height="40" FontSize="24" BorderBrush="White"/>
+        <TextBox x:Name="tb_Email" HorizontalAlignment="Left" Margin="107,876,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="360" Height="46" FontSize="24" Grid.Column="1" BorderBrush="White"/>
     </Grid>
 </Page>

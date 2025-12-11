@@ -1,5 +1,6 @@
 ﻿
 using MySql.Data.MySqlClient;
+using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
@@ -42,6 +43,7 @@ namespace WpfApp1
             {
                 while (reader.Read())
                 {
+
                     var id = reader["Id"].ToString();
                     var nome = reader["Nome"].ToString();
                     var desc = reader["Descricao"].ToString();
@@ -50,9 +52,10 @@ namespace WpfApp1
                     var cor = reader["cor"].ToString();
                     var tamanho = reader["Tamanho"].ToString();
 
-                    var valorTotal = double.Parse(valorUn) * int.Parse(quant);
+                    double valor = Math.Round(double.Parse(valorUn, new CultureInfo("pt-BR")), 3);
+                    var valorTotal = valor * int.Parse(quant);
 
-                    estoque.Add(new Item(int.Parse(id), nome, desc, double.Parse(valorUn), int.Parse(quant), cor, int.Parse(tamanho), valorTotal));
+                    estoque.Add(new Item(int.Parse(id), nome, desc, valor, int.Parse(quant), cor, int.Parse(tamanho), valorTotal));
                 }
             }
             dgEstoque.ItemsSource = estoque;

@@ -22,6 +22,9 @@
                 <Label Content="PREÇO" HorizontalAlignment="Left" Margin="235,188,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Background="White"/>
                 <Label Content="COR" HorizontalAlignment="Left" Margin="251,280,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.878,0.151" Background="White"/>
                 <ComboBox x:Name="corr" HorizontalAlignment="Left" Margin="295,278,0,0" VerticalAlignment="Top" Width="176" Height="26">
+                    <ComboBoxItem Content="ROSA"/>
+                    <ComboBoxItem Content="MARROM"/>
+                    <ComboBoxItem/>
                     <ComboBoxItem Content="PRETO"/>
                     <ComboBoxItem Content="BRANCO"/>
                     <ComboBoxItem Content="AZUL"/>

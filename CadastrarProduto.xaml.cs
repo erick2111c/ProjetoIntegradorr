@@ -1,7 +1,9 @@
-﻿using MySql.Data.MySqlClient;
+﻿using System.Globalization;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,11 +51,13 @@ namespace WpfApp1
             var sql = $"INSERT INTO produtos (Nome,Descricao,ValorUn,Quantidade,cor,Tamanho) VALUES (@nome, @descricao,@valorun,@quantidade, @cor, @tamanho)";
             try
             {
+                double valor = Math.Round(double.Parse(prec.Text, new CultureInfo("pt-BR")), 2);
+
                 using (MySqlCommand cmd = new MySqlCommand(sql, Conexao))
                 {
                     cmd.Parameters.AddWithValue("@nome", prod.Text);
                     cmd.Parameters.AddWithValue("@descricao", DESC.Text);
-                    cmd.Parameters.AddWithValue("@valorun", double.Parse(prec.Text));
+                    cmd.Parameters.AddWithValue("@valorun", valor);
                     cmd.Parameters.AddWithValue("@quantidade", int.Parse(quant.Text));
                     cmd.Parameters.AddWithValue("@cor", corr.Text);
                     cmd.Parameters.AddWithValue("@tamanho", int.Parse(tamanh.Text));
