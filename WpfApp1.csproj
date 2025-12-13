@@ -12,6 +12,7 @@
     <None Remove="798522.jpg" />
     <None Remove="810deaf1ae2b99f2e6ce75fe5e15d61e.jpg" />
     <None Remove="Cadastro.png" />
+    <None Remove="Cópia de Finalizar Pedido - Tela %281%29.png" />
     <None Remove="Design sem nome %281%29.png" />
     <None Remove="Design sem nome.png" />
     <None Remove="dfgdfrgdsfds.png" />
@@ -26,6 +27,7 @@
     <None Remove="go4kej.CY7hJZ-A.png" />
     <None Remove="images.jpg" />
     <None Remove="pngtree-3d-rendering-of-warehouse-inventory-stockpile-image_13575510.png" />
+    <None Remove="qr-de-isolado-no-icone-de-vetor-de-qrcode-branco_656810-475.avif" />
     <None Remove="Tela de Compra %281%29.png" />
     <None Remove="Tela de Compra.png" />
   </ItemGroup>
@@ -38,6 +40,7 @@
     <Resource Include="798522.jpg" />
     <Resource Include="810deaf1ae2b99f2e6ce75fe5e15d61e.jpg" />
     <Resource Include="Cadastro.png" />
+    <Resource Include="Cópia de Finalizar Pedido - Tela (1).png" />
     <Resource Include="Design sem nome (1).png" />
     <Resource Include="Design sem nome.png" />
     <Resource Include="dfgdfrgdsfds.png" />
@@ -52,6 +55,7 @@
     <Resource Include="go4kej.CY7hJZ-A.png" />
     <Resource Include="images.jpg" />
     <Resource Include="pngtree-3d-rendering-of-warehouse-inventory-stockpile-image_13575510.png" />
+    <Resource Include="qr-de-isolado-no-icone-de-vetor-de-qrcode-branco_656810-475.avif" />
     <Resource Include="Tela de Compra (1).png" />
     <Resource Include="Tela de Compra.png" />
   </ItemGroup>

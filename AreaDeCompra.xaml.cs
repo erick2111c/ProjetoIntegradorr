@@ -38,9 +38,6 @@ namespace WpfApp1
             Btns.Add(this.btn41);
             Btns.Add(this.btn42);
             Btns.Add(this.btn43);
-
-
-
         }
         private void SetProduto(object sender, RoutedEventArgs e)
         {
@@ -60,12 +57,12 @@ namespace WpfApp1
 
             var tag = btn.Tag.ToString();
 
-            //Produto = new Item("100241", 449.90, int.Parse(tag));
+            Produto = new Item(0011, btn.Name, "dewcrição", 449.90, 1, "Branco", int.Parse(tag),449.90);
         }
 
         private void btnAdicionarCarrinho_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new FinalizarCompra(Produto));
+            NavigationService.Navigate(new PedidoConcluido());
         }
 
     }

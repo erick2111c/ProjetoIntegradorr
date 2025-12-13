@@ -16,33 +16,18 @@ using System.Windows.Shapes;
 namespace WpfApp1
 {
     /// <summary>
-    /// Interação lógica para FinalizarCompra.xam
+    /// Interação lógica para PedidoConcluido.xam
     /// </summary>
-    public partial class FinalizarCompra : Page
+    public partial class PedidoConcluido : Page
     {
-        public FinalizarCompra(Item produto)
+        public PedidoConcluido()
         {
             InitializeComponent();
-
-            var teste = produto;
-        }
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void MetodoPagamentoComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+            NavigationService.Navigate(new ComprarTenis());
 
         }
     }

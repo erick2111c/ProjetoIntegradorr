@@ -8,8 +8,12 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="gerencimaneto">
 
-    <Grid Background="#FF080606" OpacityMask="#FF4A4747">
-        <DataGrid x:Name="dgEstoque"
+    <Viewbox Stretch="Fill">
+        <Grid Width="800" Height="450">
+            <Grid.Background>
+                <ImageBrush ImageSource="/Cadastro.png"/>
+            </Grid.Background>
+            <DataGrid x:Name="dgEstoque"
                   Margin="10,10,10,54"
                   AutoGenerateColumns="False"
                   
@@ -22,44 +26,45 @@
                   Foreground="Black"  
                   RowBackground="Black" 
                   AlternatingRowBackground="#FF0A0A0A">
-            <DataGrid.Resources>
-                <Style TargetType="{x:Type DataGridCell}">
-                    <Setter Property="Foreground" Value="White" />
-                    <Style.Triggers>
-                        <Trigger Property="IsSelected" Value="True">
-                            <Setter Property="Background" Value="#FF8C1A1A" />
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </DataGrid.Resources>
+                <DataGrid.Resources>
+                    <Style TargetType="{x:Type DataGridCell}">
+                        <Setter Property="Foreground" Value="White" />
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#FF8C1A1A" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.Resources>
 
-            <DataGrid.Columns>
+                <DataGrid.Columns>
 
-                <DataGridTextColumn Header="ID"  
+                    <DataGridTextColumn Header="ID"  
                                     Width="40"  
                                     Binding="{Binding Id}" />
 
-                <DataGridTextColumn Header="Item"  
+                    <DataGridTextColumn Header="Item"  
                      Width="2*"  
                      Binding="{Binding Produto}" />
 
-                <DataGridTextColumn Header="Descrição"  
+                    <DataGridTextColumn Header="Descrição"  
                                     Width="2*"  
                                     Binding="{Binding Descricao}" />
 
-                <DataGridTextColumn Header="Valor un."  
+                    <DataGridTextColumn Header="Valor un."  
                                     Width="2*"  
                                     Binding="{Binding ValorUn}" />
 
-                <DataGridTextColumn Header="Quantidade"  
+                    <DataGridTextColumn Header="Quantidade"  
                                     Width="100"  
                                     Binding="{Binding Quantidade}" />
 
-                <DataGridTextColumn Header="ValorTotal"  
+                    <DataGridTextColumn Header="ValorTotal"  
                                     Width="120"  
                                     Binding="{Binding ValorTotal}" />
-            </DataGrid.Columns>
-        </DataGrid>
-        <Button Content="VOLTAR" HorizontalAlignment="Left" Margin="10,401,0,0" VerticalAlignment="Top" Height="24" Width="71" FontSize="14" Background="#FF162C84" Foreground="White" Click="Button_Click" RenderTransformOrigin="0.127,1.792"/>
-    </Grid>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Content="VOLTAR" HorizontalAlignment="Left" Margin="18,407,0,0" VerticalAlignment="Top" Height="33" Width="82" FontSize="14" Background="#FF162C84" Foreground="White" Click="Button_Click" RenderTransformOrigin="0.127,1.792"/>
+        </Grid>
+    </Viewbox>
 </Page>

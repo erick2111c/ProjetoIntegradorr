@@ -63,14 +63,10 @@
         </Grid.Background>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="30"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="1105"/>
         </Grid.ColumnDefinitions>
 
-        <Border Grid.Column="3" CornerRadius="8" Margin="30,50,30,10" Padding="25" Grid.ColumnSpan="2">
+        <Border CornerRadius="8" Margin="598,50,30,10" Padding="25">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -123,6 +119,11 @@
                             </ComboBox>
                         </StackPanel>
                     </Grid>
+                    <Rectangle Height="117" Stroke="Black" Width="129" RenderTransformOrigin="0.543,0.458">
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/qr-de-isolado-no-icone-de-vetor-de-qrcode-branco_656810-475.avif"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
                 </StackPanel>
 
                 <StackPanel Grid.Row="1" x:Name="CamposPixStackPanel" Visibility="Collapsed" HorizontalAlignment="Stretch">
@@ -136,14 +137,14 @@
                     <TextBlock Text="Escaneie o QR Code ou clique em FINALIZAR para gerar a chave Copia e Cola." TextWrapping="Wrap" HorizontalAlignment="Center" Margin="0,0,0,0" Foreground="#CCCCCC" TextAlignment="Center"/>
                 </StackPanel>
 
-                <Button Grid.Row="2" 
+                <Button Grid.Row="1" 
                         Content="FINALIZAR" 
                         Click="Button_Click" 
-                        Style="{StaticResource FinalizarButton}" Margin="0,47,0,-17"/>
+                        Style="{StaticResource FinalizarButton}" Margin="140,387,139,84" Background="#FF085617" BorderBrush="White"/>
             </Grid>
         </Border>
 
-        <StackPanel Grid.Column="1" Margin="0,50,0,50">
+        <StackPanel Margin="60,50,567,50">
             <Label Content="Informações de Envio" FontSize="18" FontWeight="Bold" Foreground="White" Margin="0,0,0,20"/>
             <Label Content="País / Região"/>
             <TextBox Tag="País/Região"/>
@@ -196,10 +197,5 @@
 
             </Grid>
         </StackPanel>
-        <Image Grid.Column="3" HorizontalAlignment="Left" Height="178" Margin="164,465,0,0" VerticalAlignment="Top" Width="283" Source="/dxxz.png" RenderTransformOrigin="0.554,0.315">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/Gemini_Generated_Image_s9cx4bs9cx4bs9cx.png" Stretch="UniformToFill" TileMode="FlipXY"/>
-            </Image.OpacityMask>
-        </Image>
     </Grid>
 </Page>

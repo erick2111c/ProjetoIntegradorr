@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,29 +21,76 @@ namespace WpfApp1
     /// </summary>
     public partial class Login : Page
     {
+        public MySqlConnection Conexao { get; set; }
+
         public Login()
         {
             InitializeComponent();
+            Loaded += TelaInicial_Loaded;
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void TelaInicial_Loaded(object sender, RoutedEventArgs e)
         {
-                string cpf = txtCPF.Text;
-                string senha = txtSENHA.Text;
+            Window window = Window.GetWindow(this);
+            if (window != null)
+            {
+                window.WindowState = WindowState.Maximized;
+                window.WindowStyle = WindowStyle.None;
+                window.ResizeMode = ResizeMode.NoResize;
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if (!string.IsNullOrEmpty(txtCPF.Text) && !string.IsNullOrEmpty(txtSENHA.Text))
+            {
+                if (txtCPF.Text == "adm" && txtSENHA.Text == "adm")
+                {
+                    NavigationService.Navigate(new Home());
+                    return;
+                }
+            }
 
-            if(txtCPF.Text == "015")
+            try
             {
-            NavigationService.Navigate(new AreaDeCompra());
+                var db = "server=localhost;user=root;pwd=root;database=estoque";
+                if (Conexao == null)
+                {
+                    Conexao = new MySqlConnection(db);
+                    Conexao.Open();
+                }
             }
-            else
+            catch (Exception ex)
             {
+                Conexao = null;
+                MessageBox.Show(ex.Message);
+            }
+
+            try
+            {
+                var sql = $"SELECT Email,Senha FROM usuarios";
+                MySqlCommand cmd = new MySqlCommand(sql, Conexao);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    var email = reader["Email"].ToString();
+                    var senha = reader["Senha"].ToString();
+
+                    if (txtCPF.Text == email && txtSENHA.Text == senha)
+                    {
+                        reader.Close();
+                        Conexao.Close();
+                        NavigationService.Navigate(new ComprarTenis());
+                    }
+                }
+                reader.Close();
                 MessageBox.Show("Você não tem uma conta");
-                
             }
+            catch (Exception ex)
+            {
+            }
+            Conexao.Close();
 
         }
 

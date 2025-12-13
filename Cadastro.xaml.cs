@@ -31,6 +31,12 @@ namespace WpfApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if (string.IsNullOrEmpty(tb_Nome.Text) || string.IsNullOrEmpty(tb_Email.Text) || string.IsNullOrEmpty(tb_Telefone.Text) || string.IsNullOrEmpty(tb_Senha.Text))
+            {
+                MessageBox.Show("Verifique os dados");
+                return;
+            }
+
             try
             {
                 var db = "server=localhost;user=root;pwd=root;database=estoque";
@@ -62,7 +68,7 @@ namespace WpfApp1
             }
             catch (Exception ex) { }
 
-            NavigationService.Navigate(new ComprarTenis());
+            NavigationService.Navigate(new Login());
         }
     }
 }

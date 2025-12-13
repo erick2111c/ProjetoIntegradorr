@@ -8,18 +8,19 @@
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="Login">
 
-    <Grid Width="1920" Height="1080">
-        <Grid.Background>
-            <ImageBrush ImageSource="/Fazer Login (3).png"/>
-        </Grid.Background>
-        <Button Content="ENTRAR" Height="52" Width="165" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1459,890,0,0" FontSize="24" Foreground="#FFAE6231" BorderBrush="White" Background="White" FontFamily="Bahnschrift" Click="Button_Click"/>
-        <Label Content="Não tem um conta?" HorizontalAlignment="Left" Margin="1178,967,0,0" VerticalAlignment="Top" Height="37" Width="228" FontSize="24" RenderTransformOrigin="-0.655,0.5" Foreground="White"/>
-        <Button x:Name="txtCriarConta" Content="Crie agora" HorizontalAlignment="Left" Margin="1406,967,0,0" VerticalAlignment="Top" Height="43" Width="124" Background="{x:Null}" FontSize="24" Foreground="White" RenderTransformOrigin="2.459,0.93" Click="Button_Click_1"/>
-        <TextBox x:Name="txtSENHA" BorderThickness="5" Margin="1066,888,0,0" TextWrapping="Wrap" Width="340" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="18" Height="54" VerticalContentAlignment="Center" Background="White" BorderBrush="White"/>
-        <TextBox x:Name="txtCPF" HorizontalAlignment="Left" Margin="607,886,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" Height="52" FontSize="20" VerticalContentAlignment="Center" BorderBrush="White" Background="White"/>
+        <Grid Width="1920" Height="1080">
+            <Grid.Background>
+                <ImageBrush ImageSource="/Fazer Login (3).png"/>
+            </Grid.Background>
+            <Button Content="ENTRAR" Height="52" Width="165" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1459,890,0,0" FontSize="24" Foreground="#FFAE6231" BorderBrush="White" Background="White" FontFamily="Bahnschrift" Click="Button_Click"/>
+            <Label Content="Não tem um conta?" HorizontalAlignment="Left" Margin="1178,967,0,0" VerticalAlignment="Top" Height="37" Width="228" FontSize="24" RenderTransformOrigin="-0.655,0.5" Foreground="White"/>
+            <Button x:Name="txtCriarConta" Content="Crie agora" HorizontalAlignment="Left" Margin="1406,967,0,0" VerticalAlignment="Top" Height="43" Width="124" Background="{x:Null}" FontSize="24" Foreground="White" RenderTransformOrigin="2.459,0.93" Click="Button_Click_1"/>
+            <TextBox x:Name="txtSENHA" BorderThickness="5" Margin="1066,888,0,0" TextWrapping="Wrap" Width="340" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="18" Height="54" VerticalContentAlignment="Center" Background="White" BorderBrush="White"/>
+            <TextBox x:Name="txtCPF" HorizontalAlignment="Left" Margin="607,886,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" Height="52" FontSize="20" VerticalContentAlignment="Center" BorderBrush="White" Background="White"/>
+            <Rectangle HorizontalAlignment="Left" Height="35" Margin="535,896,0,0" Stroke="White" VerticalAlignment="Top" Width="67" Fill="White"/>
+            <Label Content="EMAIL" HorizontalAlignment="Left" Margin="535,891,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="#FFB06738"/>
+            <Rectangle HorizontalAlignment="Left" Height="35" Margin="960,901,0,0" Stroke="White" VerticalAlignment="Top" Width="101" Fill="White"/>
+            <Label Content="SENHA" HorizontalAlignment="Left" Margin="947,894,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="#FFB06738"/>
 
-
-
-
-    </Grid>
+        </Grid>
 </Page>

@@ -26,6 +26,7 @@
                 <Button x:Name="btnAdicionarCarrinho" Content="ADICIONAR AO CARRINHO" HorizontalAlignment="Left" Margin="413,477,0,0" VerticalAlignment="Top" Height="27" Width="318" BorderBrush="Black" Background="Black" Foreground="White" Click="btnAdicionarCarrinho_Click"/>
                 <Rectangle HorizontalAlignment="Left" Height="48" Margin="405,144,0,0" VerticalAlignment="Top" Width="171" Fill="#FF262625"/>
                 <Rectangle HorizontalAlignment="Left" Height="22" Margin="409,447,0,0" VerticalAlignment="Top" Width="96" Fill="White"/>
+                <Rectangle HorizontalAlignment="Left" Height="44" Margin="408,540,0,0" Stroke="White" VerticalAlignment="Top" Width="332" Fill="White"/>
 
             </Grid>
         </Viewbox>
