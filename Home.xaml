@@ -13,9 +13,9 @@
             <Grid.Background>
                 <ImageBrush ImageSource="/Cadastro.png"/>
             </Grid.Background>
-            <Button Content="CADASTRAR" HorizontalAlignment="Left" Margin="24,151,0,0" VerticalAlignment="Top" Height="49" Width="83" Click="Button_Click" Background="#FF33312C" BorderBrush="#FF3F3C38" Foreground="White"/>
-            <Button Content="EDITAR" HorizontalAlignment="Left" Margin="25,222,0,0" VerticalAlignment="Top" Height="49" Width="82" Background="#FF33312C" BorderBrush="#FF3F3C38" Foreground="White" Click="Button_Click_2"/>
-            <Button Content="ESTOQUE" HorizontalAlignment="Left" Margin="30,293,0,0" VerticalAlignment="Top" Height="48" Width="77" Background="#FF33312C" BorderBrush="#FF3F3C38" Foreground="White" Click="Button_Click_1"/>
+            <Button Content="CADASTRAR" HorizontalAlignment="Left" Margin="24,203,0,0" VerticalAlignment="Top" Height="49" Width="77" Click="Button_Click" Background="#FF33312C" BorderBrush="#FF3F3C38" Foreground="White"/>
+            <Button Content="ESTOQUE" HorizontalAlignment="Left" Margin="24,300,0,0" VerticalAlignment="Top" Height="48" Width="77" Background="#FF33312C" BorderBrush="#FF3F3C38" Foreground="White" Click="Button_Click_1"/>
+            <Button Content="VOLTAR" HorizontalAlignment="Left" Margin="24,560,0,0" VerticalAlignment="Top" Height="30" Width="61" Background="#FF7F1C1C" Foreground="White" BorderBrush="White" Click="Button_Click_3"/>
 
         </Grid>
     </Viewbox>

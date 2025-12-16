@@ -7,19 +7,19 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PedidoConcluido">
-    
+
     <Viewbox Stretch="Fill">
         <Grid Width="800" Height="600">
             <Grid.Background>
                 <ImageBrush ImageSource="/Cópia de Finalizar Pedido - Tela (1).png"/>
             </Grid.Background>
             <Button Content="." HorizontalAlignment="Left" Margin="571,430,0,0" VerticalAlignment="Top" Width="164" Height="38" Click="Button_Click" Opacity="0"/>
-            <TextBox HorizontalAlignment="Left" Margin="70,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" Height="29" />
-            <TextBox HorizontalAlignment="Left" Margin="295,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" Height="29"/>
-            <TextBox HorizontalAlignment="Left" Margin="70,326,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="429" Height="29" />
-            <TextBox HorizontalAlignment="Left" Margin="70,402,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Height="29" />
-            <TextBox HorizontalAlignment="Left" Margin="220,401,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Height="29"/>
-            <TextBox HorizontalAlignment="Left" Margin="370,401,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" Height="30" />
+            <TextBox HorizontalAlignment="Left" Margin="70,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" Height="29" Foreground="White" BorderBrush="#FF1A1A1A" Background="#FF1A1A1A" />
+            <TextBox HorizontalAlignment="Left" Margin="295,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" Height="29" BorderBrush="#FF1A1A1A" Background="#FF1A1A1A" Foreground="White"/>
+            <TextBox HorizontalAlignment="Left" Margin="70,326,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="429" Height="29" BorderBrush="#FF1A1A1A" Background="#FF1A1A1A" Foreground="White" />
+            <TextBox HorizontalAlignment="Left" Margin="70,402,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Height="29" BorderBrush="#FF1A1A1A" Background="#FF1A1A1A" Foreground="White" />
+            <TextBox HorizontalAlignment="Left" Margin="220,401,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Height="29" BorderBrush="#FF1A1A1A" Background="#FF1A1A1A" Foreground="White"/>
+            <TextBox HorizontalAlignment="Left" Margin="370,401,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" Height="30" Background="#FF1A1A1A" BorderBrush="#FF1A1A1A" Foreground="White" />
             <RadioButton Content="" HorizontalAlignment="Left" Margin="561,235,0,0" VerticalAlignment="Top" Width="14"/>
             <RadioButton Content="" HorizontalAlignment="Left" Margin="561,288,0,0" VerticalAlignment="Top" Width="14" RenderTransformOrigin="0.5,0.483"/>
 

@@ -1,8 +1,10 @@
 ﻿
 using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
 using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Navigation;
 
 namespace WpfApp1
@@ -32,13 +34,23 @@ namespace WpfApp1
                 MessageBox.Show(ex.Message);
             }
 
+            CarregarEstoque();
+        }
 
-            var estoque = new List<Item>();
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Conexao.Close();
+            NavigationService.Navigate(new Home());
 
-            var sqlSelect = "SELECT * FROM produtos";
+        }
+
+        private void CarregarEstoque()
+        {
+            var sqlSelect = "SELECT * FROM produtos ORDER BY Id";
             MySqlCommand cmd = new MySqlCommand(sqlSelect, Conexao);
             var reader = cmd.ExecuteReader();
 
+            var estoque = new List<Item>();
             if (reader != null)
             {
                 while (reader.Read())
@@ -57,15 +69,24 @@ namespace WpfApp1
 
                     estoque.Add(new Item(int.Parse(id), nome, desc, valor, int.Parse(quant), cor, int.Parse(tamanho), valorTotal));
                 }
+                reader.Close();
             }
             dgEstoque.ItemsSource = estoque;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            Conexao.Close();
-            NavigationService.Navigate(new Home());
 
+            var estoque = new List<Item>();
+            var sql = "DELETE FROM produtos WHERE id = @id";
+            var curId = (Item)dgEstoque.SelectedItem;
+            using (MySqlCommand cmd = new MySqlCommand(sql, Conexao))
+            {
+                cmd.Parameters.AddWithValue("@id", curId.Id);
+                cmd.ExecuteNonQuery();
+            }
+
+            CarregarEstoque();
         }
     }
 
