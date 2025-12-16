@@ -88,6 +88,33 @@ namespace WpfApp1
 
             CarregarEstoque();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var sqlUpdate = @"UPDATE produtos 
+                  SET Nome = @nome,
+                      Descricao = @descricao,
+                      ValorUn = @valor,
+                      Quantidade = @quantidade,
+                      Cor = @cor,
+                      Tamanho = @tamanho
+                  WHERE Id = @id";
+
+            var item = (Item)dgEstoque.SelectedItem;
+
+            using (MySqlCommand cmd = new MySqlCommand(sqlUpdate, Conexao))
+            {
+                cmd.Parameters.AddWithValue("@id", item.Id);
+                cmd.Parameters.AddWithValue("@nome", item.Produto);
+                cmd.Parameters.AddWithValue("@descricao", item.Descricao);
+                cmd.Parameters.AddWithValue("@valor", item.ValorUn);
+                cmd.Parameters.AddWithValue("@quantidade", item.Quantidade);
+                cmd.Parameters.AddWithValue("@cor", item.Cor);
+                cmd.Parameters.AddWithValue("@tamanho", item.Tam);
+
+                cmd.ExecuteNonQuery(); // EXECUTA O UPDATE
+            }
+        }
     }
 
     //internal class Item
