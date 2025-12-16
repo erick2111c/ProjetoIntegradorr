@@ -49,49 +49,55 @@ namespace WpfApp1
                     NavigationService.Navigate(new Home());
                     return;
                 }
-            }
 
-            try
-            {
-                var db = "server=localhost;user=root;pwd=root;database=estoque";
-                if (Conexao == null)
+                try
                 {
-                    Conexao = new MySqlConnection(db);
-                    Conexao.Open();
-                }
-            }
-            catch (Exception ex)
-            {
-                Conexao = null;
-                MessageBox.Show(ex.Message);
-            }
-
-            try
-            {
-                var sql = $"SELECT Email,Senha FROM usuarios";
-                MySqlCommand cmd = new MySqlCommand(sql, Conexao);
-                MySqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    var email = reader["Email"].ToString();
-                    var senha = reader["Senha"].ToString();
-
-                    if (txtCPF.Text == email && txtSENHA.Text == senha)
+                    var db = "server=localhost;user=root;pwd=root;database=estoque";
+                    if (Conexao == null)
                     {
+                        Conexao = new MySqlConnection(db);
+                        Conexao.Open();
+
+                        var sql = $"SELECT Email,Senha FROM usuarios";
+                        MySqlCommand cmd = new MySqlCommand(sql, Conexao);
+                        MySqlDataReader reader = cmd.ExecuteReader();
+                        var podeLogar = false;
+                        while (reader.Read())
+                        {
+                            var email = reader["Email"].ToString();
+                            var senha = reader["Senha"].ToString();
+
+                            if (txtCPF.Text == email && txtSENHA.Text == senha)
+                            {
+                                podeLogar = true;
+
+                            }
+                        }
                         reader.Close();
-                        Conexao.Close();
-                        NavigationService.Navigate(new ComprarTenis());
+
+                        if (podeLogar)
+                        {
+                            NavigationService.Navigate(new ComprarTenis());
+                        }
+                        else
+                        {
+                            MessageBox.Show("Você não tem uma conta");
+                        }
                     }
                 }
-                reader.Close();
-                MessageBox.Show("Você não tem uma conta");
+                catch (Exception ex)
+                {
+                    Conexao.Close();
+                    Conexao = null;
+                    MessageBox.Show(ex.Message);
+                }
+                Conexao.Close();
+                Conexao = null;
             }
-            catch (Exception ex)
+            else
             {
+                MessageBox.Show("Digiteee");
             }
-            Conexao.Close();
-
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
