@@ -26,6 +26,7 @@
     <None Remove="Gemini_Generated_Image_s9cx4bs9cx4bs9cx.png" />
     <None Remove="go4kej.CY7hJZ-A.png" />
     <None Remove="images.jpg" />
+    <None Remove="pagamn.png" />
     <None Remove="pngtree-3d-rendering-of-warehouse-inventory-stockpile-image_13575510.png" />
     <None Remove="qr-de-isolado-no-icone-de-vetor-de-qrcode-branco_656810-475.avif" />
     <None Remove="Tela de Compra %281%29.png" />
@@ -54,6 +55,7 @@
     <Resource Include="Gemini_Generated_Image_s9cx4bs9cx4bs9cx.png" />
     <Resource Include="go4kej.CY7hJZ-A.png" />
     <Resource Include="images.jpg" />
+    <Resource Include="pagamn.png" />
     <Resource Include="pngtree-3d-rendering-of-warehouse-inventory-stockpile-image_13575510.png" />
     <Resource Include="qr-de-isolado-no-icone-de-vetor-de-qrcode-branco_656810-475.avif" />
     <Resource Include="Tela de Compra (1).png" />
