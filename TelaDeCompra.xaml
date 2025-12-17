@@ -15,6 +15,7 @@
         <Button x:Name="btnComprar1" Content="Comprar" HorizontalAlignment="Left" Margin="36,412,0,0" VerticalAlignment="Top" Height="28" Width="200" Opacity="0" Click="btnComprar1_Click"/>
         <Button x:Name="btnComprar2" Content="Comprar" HorizontalAlignment="Left" Margin="303,412,0,0" VerticalAlignment="Top" Height="28" Width="200" Opacity="0"/>
         <Button x:Name="btnComprar3" Content="Comprar" HorizontalAlignment="Left" Margin="560,412,0,0" VerticalAlignment="Top" Height="28" Width="200" Opacity="0" Background="#FF332C2C"/>
+        <Button x:Name="btnComprar2_Copiar" Content="Comprar" HorizontalAlignment="Left" Margin="431,122,0,0" VerticalAlignment="Top" Height="28" Width="200"/>
 
     </Grid>
 </Page>

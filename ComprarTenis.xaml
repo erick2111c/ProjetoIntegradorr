@@ -6,14 +6,14 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ComprarTenis">
-
-        <Viewbox Stretch="Fill">
-            <Grid Width="800" Height="600">
-                <Image Source="Tela de Compra (1).png" Stretch="Fill"/>
-                <Button Content="COMPRAR" HorizontalAlignment="Left" Margin="43,551,0,0" VerticalAlignment="Top" Width="187" Height="31" BorderBrush="#FF0C7272" Background="#FF0C7272" Foreground="White" FontFamily="Segoe UI Black" FontSize="16" Click="Button_Click"/>
-                <Button Content="COMPRAR" HorizontalAlignment="Center" Margin="0,551,0,0" VerticalAlignment="Top" Width="188" Height="31"  BorderBrush="#FF0C7272" Background="#FF0C7272" Foreground="White" FontFamily="Segoe UI Black" FontSize="16"/>
-                <Button Content="COMPRAR" HorizontalAlignment="Left" Margin="566,550,0,0" VerticalAlignment="Top" Width="187" Height="32"  BorderBrush="#FF0C7272" Background="#FF0C7272" Foreground="White" FontFamily="Segoe UI Black" FontSize="16"/>
-
-            </Grid>
-        </Viewbox>
+    <Viewbox Stretch="Fill">
+        <Grid Width="800" Height="450">
+            <Image Source="/Tela de Compra (1).png" Stretch="Fill" Margin="-10,0,10,0"/>
+            <Button Content="COMPRAR" HorizontalAlignment="Left" Margin="32,551,0,0" VerticalAlignment="Top" Width="187" Height="31" BorderBrush="#FF0C7272" Background="#FF0C7272" Foreground="White" FontFamily="Segoe UI Black" FontSize="16" Click="Button_Click"/>
+            <Button Content="COMPRAR" HorizontalAlignment="Left" Margin="296,551,0,0" VerticalAlignment="Top" Width="188" Height="31"  BorderBrush="#FF0C7272" Background="#FF0C7272" Foreground="White" FontFamily="Segoe UI Black" FontSize="16"/>
+            <Button Content="COMPRAR" HorizontalAlignment="Left" Margin="557,550,0,0" VerticalAlignment="Top" Width="187" Height="32"  BorderBrush="#FF0C7272" Background="#FF0C7272" Foreground="White" FontFamily="Segoe UI Black" FontSize="16"/>
+            <Button Content="VOLTAR" HorizontalAlignment="Left" Margin="683,10,0,0" VerticalAlignment="Top" Width="91" Height="23"  BorderBrush="#FF0C7272" Background="#FF0C7272" Foreground="White" FontFamily="Segoe UI Black" FontSize="16" Click="Button_Click_2"/>
+            <Button Content="COMPRAR" HorizontalAlignment="Left" Margin="42,414,0,0" VerticalAlignment="Top" Width="174" Opacity="0"/>
+        </Grid>
+    </Viewbox>
 </Page>

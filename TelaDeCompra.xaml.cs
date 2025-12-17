@@ -27,6 +27,7 @@ namespace WpfApp1
 
         private void btnComprar1_Click(object sender, RoutedEventArgs e)
         {
+
         }
     }
 }
